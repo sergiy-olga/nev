@@ -1,16 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <FirstButton msg="кнопка"/>
+  <FriendButton msg="кнопка 2"/>
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
+import FirstButton from './components/FirstButton.vue'
+import FriendButton from './components/FriendButton.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HelloWorld,
+    FirstButton,
+    FriendButton
+  },
+ 
 }
 </script>
 
