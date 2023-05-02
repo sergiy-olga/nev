@@ -52,7 +52,7 @@
                 :msg="msgH1"
               ></v-text>
             </div>
-            <div class="main_foto">
+            <div class="main_foto" :class="{isVisible: showPhoto}" @click="closePhoto">
               <v-img
                 :width="withTitle"
                 :height="heigthTitle"
@@ -516,16 +516,21 @@ export default {
   methods: {
     test() {
       this.colorD9D9D9 = this.colorD9D9D9 === 'red' ? '#D9D9D9' : 'red';
+      this.showPhoto = true;
     },
     test2(){
       this.withIcon="35px"
       this.heightIcon="35px"
       this.githubIcon="twitter"
+    },
+    closePhoto() {
+      this.showPhoto = false;
     }
   },
 
   data() {
     return {
+      showPhoto: false,
       nameHome: "Home",
       nameAbount: "Abount",
       nameTechStack: "Tech Stack",
@@ -792,5 +797,15 @@ footer {
 }
 .stackImage div {
   margin: 50px 30px;
+}
+
+
+.main_foto {
+  opacity: 0;
+  transition: opacity 2s 2s linear;
+}
+
+.main_foto.isVisible {
+  opacity: 1;
 }
 </style>
