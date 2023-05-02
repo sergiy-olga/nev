@@ -16,17 +16,17 @@
           <v-img
             @click="test2"
             :width="withIcon"
-            :height="heigthIcon"
+            :height="heightIcon"
             :src="githubIcon"
           ></v-img>
           <v-img
             :width="withIcon"
-            :height="heigthIcon"
+            :height="heightIcon"
             :src="twitterIcon"
           ></v-img>
           <v-img
             :width="withIcon"
-            :height="heigthIcon"
+            :height="heightIcon"
             :src="linkedinIcon"
           ></v-img>
         </div>
@@ -125,7 +125,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject1"></v-linc>
@@ -133,7 +133,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
@@ -178,7 +178,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject2"></v-linc>
@@ -186,7 +186,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project2"></v-linc>
@@ -231,7 +231,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject3"></v-linc>
@@ -239,7 +239,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project3"></v-linc>
@@ -284,7 +284,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject4"></v-linc>
@@ -292,7 +292,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project4"></v-linc>
@@ -337,7 +337,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject5"></v-linc>
@@ -345,7 +345,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project5"></v-linc>
@@ -390,7 +390,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsLinkChain"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLinkProject6"></v-linc>
@@ -398,7 +398,7 @@
                     <div class="project_footer_content">
                       <v-img
                         :width="withIcon"
-                        :height="heigthIcon"
+                        :height="heightIcon"
                         :src="iconsGithub"
                       ></v-img>
                       <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
@@ -428,17 +428,17 @@
           <div class="footer_icon">
             <v-img
               :width="withIcon"
-              :height="heigthIcon"
+              :height="heightIcon"
               :src="githubIcon"
             ></v-img>
             <v-img
               :width="withIcon"
-              :height="heigthIcon"
+              :height="heightIcon"
               :src="twitterIcon"
             ></v-img>
             <v-img
               :width="withIcon"
-              :height="heigthIcon"
+              :height="heightIcon"
               :src="linkedinIcon"
             ></v-img>
           </div>
@@ -509,7 +509,7 @@ export default {
     },
     test2(){
       this.withIcon="35px"
-      this.heigthIcon="35px"
+      this.heightIcon="35px"
       this.githubIcon="twitter"
     }
   },
@@ -524,7 +524,7 @@ export default {
       withLogo: "97px",
       heightLogo: "59px",
       withIcon: "30px",
-      heigthIcon: "30px",
+      heightIcon: "30px",
       msgH1: "Hi 👋, My name is Pavan MG I build things for web",
       withTitle: "349px",
       heigthTitle: "349px",
