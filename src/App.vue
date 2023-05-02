@@ -1,19 +1,20 @@
 <template>
   <div class="wrapper">
     <div class="content">
-      <header>
+      <header id="home">
         <div class="logo">
           <v-img :width="withLogo" :height="heigthLogo" :src="logo"></v-img>
         </div>
         <nav class="nav_header nav">
-          <v-linc :href="''" :msg="nameHome"></v-linc>
-          <v-linc :href="''" :msg="nameAbount"></v-linc>
-          <v-linc :href="''" :msg="nameTechStack"></v-linc>
-          <v-linc :href="''" :msg="nameProjects"></v-linc>
-          <v-linc :href="''" :msg="nameContact"></v-linc>
+          <v-linc :href="'#home'" :msg="nameHome"></v-linc>
+          <v-linc :href="'#abount'" :msg="nameAbount"></v-linc>
+          <v-linc :href="'#tech_stack'" :msg="nameTechStack"></v-linc>
+          <v-linc :href="'#project'" :msg="nameProjects"></v-linc>
+          <v-linc :href="'#contact'" :msg="nameContact"></v-linc>
         </nav>
         <div class="header_icon">
           <v-img
+            @click="test2"
             :width="withIcon"
             :height="heigthIcon"
             :src="githubIcon"
@@ -32,10 +33,11 @@
       </header>
       <main>
         <div class="content">
-          <div class="main_title">
+          <div id="abount" class="main_title">
             <div class="title">
               <v-text
                 :color="colorD9D9D9"
+                @click="test"
                 :fontSize="fontSize58"
                 :fontWeight="fontWeight700"
                 :lineHeight="lineHeight70"
@@ -50,7 +52,7 @@
               ></v-img>
             </div>
           </div>
-          <div class="mainTechStack">
+          <div id="tech_stack" class="mainTechStack">
             <div class="mainTechStackH2">
               <v-text :fontSize="fontSize48" :msg="msgH2"></v-text>
             </div>
@@ -77,7 +79,7 @@
               <v-img :src="githubImage"></v-img>
             </div>
           </div>
-          <div class="mainProject">
+          <div id="project" class="mainProject">
             <v-text :fontSize="fontSize48" :msg="nameTitleH2Project"></v-text>
             <v-text
               :color="colorA7A7A7"
@@ -94,46 +96,48 @@
                     :src="project1"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject1"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject1"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject1"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject1"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject1"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject1"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject1"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject1"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -145,46 +149,48 @@
                     :src="project2"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject2"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject2"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject2"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject2"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject2"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project2"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject2"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject2"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject2"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project2"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -196,46 +202,48 @@
                     :src="project3"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject3"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject3"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject3"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject3"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject3"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project3"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject3"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject3"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject3"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project3"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -247,46 +255,48 @@
                     :src="project4"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject4"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject4"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject4"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject4"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject4"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project4"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject4"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject4"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject4"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project4"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -298,46 +308,48 @@
                     :src="project5"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject5"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject5"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject5"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject5"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject5"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project5"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject5"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject5"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject5"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project5"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -349,46 +361,48 @@
                     :src="project6"
                   ></v-img>
                 </div>
-                <div class="project_title">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize28"
-                    :fontWeight="fontWeight500"
-                    :msg="nameProject6"
-                  ></v-text>
-                </div>
-                <div class="project_text">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize18"
-                    :fontWeight="fontWeight300"
-                    :msg="textProject6"
-                  ></v-text>
-                </div>
-                <div class="project_text2">
-                  <v-text
-                    :color="colorA7A7A7"
-                    :fontSize="fontSize16"
-                    :fontWeight="fontWeight400"
-                    :msg="techTextProject6"
-                  ></v-text>
-                </div>
-                <div class="project_footer">
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsLinkChain"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLinkProject6"></v-linc>
+                <div class="project_text_content">
+                  <div class="project_title">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize28"
+                      :fontWeight="fontWeight500"
+                      :msg="nameProject6"
+                    ></v-text>
                   </div>
-                  <div>
-                    <v-img
-                      :width="withIcon"
-                      :height="heigthIcon"
-                      :src="iconsGithub"
-                    ></v-img>
-                    <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
+                  <div class="project_text">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize18"
+                      :fontWeight="fontWeight300"
+                      :msg="textProject6"
+                    ></v-text>
+                  </div>
+                  <div class="project_text2">
+                    <v-text
+                      :color="colorA7A7A7"
+                      :fontSize="fontSize16"
+                      :fontWeight="fontWeight400"
+                      :msg="techTextProject6"
+                    ></v-text>
+                  </div>
+                  <div class="project_footer">
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsLinkChain"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLinkProject6"></v-linc>
+                    </div>
+                    <div class="project_footer_content">
+                      <v-img
+                        :width="withIcon"
+                        :height="heigthIcon"
+                        :src="iconsGithub"
+                      ></v-img>
+                      <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -397,17 +411,19 @@
         </div>
       </main>
       <footer>
-        <div class="footer_contact">
-          <div class="footer_logo">
-            <v-img
-              :width="withLogo"
-              :height="heigthLogo"
-              :src="logoFooter"
-            ></v-img>
-          </div>
-          <div class="footer_contacts">
-            <v-text :fontSize="fontSize18" :msg="footerTel"></v-text>
-            <v-text :fontSize="fontSize18" :msg="footerEmail"></v-text>
+        <div id="contact" class="footer_contact">
+          <div class="footer_logo_cotnent">
+            <div class="footer_logo">
+              <v-img
+                :width="withLogo"
+                :height="heigthLogo"
+                :src="logoFooter"
+              ></v-img>
+            </div>
+            <div class="footer_contacts">
+              <v-text :fontSize="fontSize18" :msg="footerTel"></v-text>
+              <v-text :fontSize="fontSize18" :msg="footerEmail"></v-text>
+            </div>
           </div>
           <div class="footer_icon">
             <v-img
@@ -487,6 +503,17 @@ export default {
     vLinc,
     vText,
   },
+  methods: {
+    test() {
+      this.colorD9D9D9 = "red"
+    },
+    test2(){
+      this.withIcon="35px"
+      this.heigthIcon="35px"
+      this.githubIcon="twitter"
+    }
+  },
+
   data() {
     return {
       nameHome: "Home",
@@ -505,14 +532,15 @@ export default {
       msgH3: "Technologies I’ve been working with recently",
       nameTitleH2Project: "Projects",
       nameTitleH3Project: "Things I’ve built so far",
-      withProject: "370px",
+      
+      withProject: "375px",
       heigthProject: "260px",
 
       colorD9D9D9: "#D9D9D9",
       colorDCCCCCC: "#D#CCCCCC",
       colorA7A7A7: "#A7A7A7",
-      fontWeight700: "700",
 
+      fontWeight700: "700",
       fontWeight500: "500",
       fontWeight400: "400",
       fontWeight300: "300",
@@ -671,34 +699,80 @@ main {
   width: 50%;
 }
 
-.mainTechStackH2{
-text-align: center;
-}
-.mainTechStackH3{
+.mainTechStackH2 {
   text-align: center;
 }
-.projects {
+.mainTechStackH3,
+.mainProject {
+  text-align: center;
+}
+.project_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 375px;
+  width: 100%;
+  background: #363636;
+  box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.projecct_title {
+  text-align: justify;
+}
+
+.project_text_content {
+  padding: 0px 31px 0px 28px;
+  text-align: justify;
+}
+.project_footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.project_footer_content {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10%;
 }
 footer {
   max-width: 1193px;
   width: 100%;
   margin: 0 auto;
 }
-.footer_header {
+.footer_contact {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
-  margin-bottom: 50px;
+  width: 100%;
+  margin-bottom: 20px;
 }
-.footer_footer {
+.footer_contacts {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 35%;
+}
+.footer_logo_cotnent {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+.footer_nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
   align-items: center;
+}
+.nav_footer {
+  margin: 0%;
 }
 
 .stackImage {
@@ -708,10 +782,5 @@ footer {
 }
 .stackImage div {
   margin: 50px 30px;
-}
-
-.project {
-  max-width: 375px;
-  width: 100%;
 }
 </style>
