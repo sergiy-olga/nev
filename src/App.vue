@@ -3,7 +3,7 @@
     <div class="content">
       <header id="home">
         <div class="logo">
-          <v-img :width="withLogo" :height="heigthLogo" :src="logo"></v-img>
+          <v-img :width="withLogo" :height="heightLogo" :src="logo"></v-img>
         </div>
         <nav class="nav_header nav">
           <v-linc :href="'#home'" :msg="nameHome"></v-linc>
@@ -416,7 +416,7 @@
             <div class="footer_logo">
               <v-img
                 :width="withLogo"
-                :height="heigthLogo"
+                :height="heightLogo"
                 :src="logoFooter"
               ></v-img>
             </div>
@@ -522,7 +522,7 @@ export default {
       nameProjects: "Projects",
       nameContact: "Contact",
       withLogo: "97px",
-      heigthLogo: "59px",
+      heightLogo: "59px",
       withIcon: "30px",
       heigthIcon: "30px",
       msgH1: "Hi 👋, My name is Pavan MG I build things for web",
