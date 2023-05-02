@@ -515,7 +515,7 @@ export default {
   },
   methods: {
     test() {
-      this.colorD9D9D9 = "red"
+      this.colorD9D9D9 = this.colorD9D9D9 === 'red' ? '#D9D9D9' : 'red';
     },
     test2(){
       this.withIcon="35px"
