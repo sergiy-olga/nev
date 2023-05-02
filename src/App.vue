@@ -2,9 +2,17 @@
   <div class="wrapper">
     <div class="content">
       <header id="home">
-        <div class="logo">
+        <!-- <div class="logo">
           <v-img :width="withLogo" :height="heightLogo" :src="logo"></v-img>
-        </div>
+        </div> -->
+        <v-container class="logo">
+          <template #icon>
+           <v-img :width="withLogo" :height="heightLogo" :src="logo"></v-img>
+          </template>
+          <template>
+             <v-img :width="withLogo" :height="heightLogo" :src="logo"></v-img>
+          </template>
+        </v-container>
         <nav class="nav_header nav">
           <v-linc :href="'#home'" :msg="nameHome"></v-linc>
           <v-linc :href="'#abount'" :msg="nameAbount"></v-linc>
@@ -495,6 +503,7 @@ import logoFooter from "./assets/logoFooter.png";
 import vImg from "./components/v-img.vue";
 import vLinc from "./components/v-linc.vue";
 import vText from "./components/v-text.vue";
+import vContainer from "./components/v-container.vue";
 
 export default {
   name: "App",
@@ -502,6 +511,7 @@ export default {
     vImg,
     vLinc,
     vText,
+    vContainer,
   },
   methods: {
     test() {
