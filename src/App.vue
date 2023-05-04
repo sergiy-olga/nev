@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :style="{ opacity: opacity }">
     <div class="content">
       <header id="home">
         <div class="logo">
@@ -88,7 +88,7 @@
               :msg="nameTitleH3Project"
             ></v-text>
             <div class="project_content">
-              <div class="project">
+              <div class="project" @click="openPopap1">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -141,7 +141,7 @@
                   </div>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" @click="openPopap2">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -194,7 +194,7 @@
                   </div>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" @click="openPopap3">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -247,7 +247,7 @@
                   </div>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" @click="openPopap4">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -300,7 +300,7 @@
                   </div>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" @click="openPopap5">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -353,7 +353,7 @@
                   </div>
                 </div>
               </div>
-              <div class="project">
+              <div class="project" @click="openPopap6">
                 <div class="project_image">
                   <v-img
                     :width="withProject"
@@ -461,6 +461,277 @@
       </footer>
     </div>
   </div>
+
+  <!-- <div class="popap" :style="{ display: isOpenPopap }">
+    <div class="popap_button" @click="closePopap">
+      <v-img :width="'20px'" :height="'20px'" :src="vClose"></v-img>
+    </div>
+    <div class="project-popap">
+      <div class="project_image_popap">
+        <v-img :width="'900px'" :height="'400px'" :src="project1"></v-img>
+      </div>
+      <div class="project_text_content_popap">
+        <div class="project_title_popap">
+          <v-text
+            :color="colorA7A7A7"
+            :fontSize="fontSize28"
+            :fontWeight="fontWeight500"
+            :msg="nameProject1"
+          ></v-text>
+        </div>
+        <div class="project_text_popap">
+          <v-text
+            :color="colorA7A7A7"
+            :fontSize="fontSize18"
+            :fontWeight="fontWeight300"
+            :msg="textProject1"
+          ></v-text>
+        </div>
+        <div class="project_text2_popap">
+          <v-text
+            :color="colorA7A7A7"
+            :fontSize="fontSize16"
+            :fontWeight="fontWeight400"
+            :msg="techTextProject1"
+          ></v-text>
+        </div>
+        <div class="project_footer_popap">
+          <div class="project_footer_content_popap">
+            <v-img
+              :width="withIcon"
+              :height="heigthIcon"
+              :src="iconsLinkChain"
+            ></v-img>
+            <v-linc :href="''" :msg="nameLinkProject1"></v-linc>
+          </div>
+          <div class="project_footer_content_popap">
+            <v-img
+              :width="withIcon"
+              :height="heigthIcon"
+              :src="iconsGithub"
+            ></v-img>
+            <v-linc :href="''" :msg="nameLink2Project1"></v-linc>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<div :style="{ display: isOpenPopap1}">
+  <v-PopapTest>
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project1"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+  
+
+<div :style="{ display: isOpenPopap2}">
+  <v-PopapTest >
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project2"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+
+<div :style="{ display: isOpenPopap3}">
+  <v-PopapTest >
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project3"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+  
+
+  <div :style="{ display: isOpenPopap4}">
+  <v-PopapTest >
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project4"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+  
+
+  <div :style="{ display: isOpenPopap5}">
+  <v-PopapTest >
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project5"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+  
+
+  <div :style="{ display: isOpenPopap6}">
+  <v-PopapTest >
+    <template #popapClose>
+      <v-img :width="'20px'" :height="'20px'" :src="vClose" @click="closePopap"></v-img>
+    </template>
+    <template #popapImg>
+      <v-img :width="'900px'" :height="'400px'" :src="project6"></v-img>
+    </template>
+    <template #popapTitle>
+      <v-text
+        :color="'black'"
+        :fontSize="fontSize28"
+        :fontWeight="fontWeight500"
+        :msg="nameProject1"
+      ></v-text>
+    </template>
+    <template #popapText1>
+      <v-text
+        :color="'red'"
+        :fontSize="fontSize18"
+        :fontWeight="fontWeight300"
+        :msg="textProject1"
+      ></v-text>
+    </template>
+    <template #popapText2>
+      <v-text
+        :color="'green'"
+        :fontSize="fontSize16"
+        :fontWeight="fontWeight400"
+        :msg="techTextProject1"
+      ></v-text>
+    </template>
+  </v-PopapTest>
+</div>
+  
+  
 </template>
 
 <script>
@@ -496,26 +767,69 @@ import vImg from "./components/v-img.vue";
 import vLinc from "./components/v-linc.vue";
 import vText from "./components/v-text.vue";
 
+import vClose from "./assets/close.png";
+
+import vPopapTest from "./components/v-popapTest.vue";
+
 export default {
   name: "App",
   components: {
     vImg,
     vLinc,
     vText,
+    vPopapTest,
   },
   methods: {
     test() {
-      this.colorD9D9D9 = "red"
+      this.colorD9D9D9 = "red";
     },
-    test2(){
-      this.withIcon="35px"
-      this.heigthIcon="35px"
-      this.githubIcon="twitter"
-    }
+    test2() {
+      this.withIcon = "35px";
+      this.heigthIcon = "35px";
+    },
+    openPopap1() {
+      this.isOpenPopap1 = "block";
+      this.opacity = "0.15";
+    },
+    openPopap2() {
+      this.isOpenPopap2 = "block";
+      this.opacity = "0.15";
+    },
+    openPopap3() {
+      this.isOpenPopap3 = "block";
+      this.opacity = "0.15";
+    },
+    openPopap4() {
+      this.isOpenPopap4 = "block";
+      this.opacity = "0.15";
+    },
+    openPopap5() {
+      this.isOpenPopap5 = "block";
+      this.opacity = "0.15";
+    },
+    openPopap6() {
+      this.isOpenPopap6 = "block";
+      this.opacity = "0.15";
+    },
+    closePopap() {
+      this.isOpenPopap1 = "none";
+      this.isOpenPopap2 = "none";
+      this.isOpenPopap3 = "none";
+      this.isOpenPopap4 = "none";
+      this.isOpenPopap5 = "none";
+      this.isOpenPopap6 = "none";
+      this.opacity = "1";
+    },
   },
 
   data() {
     return {
+      isOpenPopap1: "none",
+      isOpenPopap2: "none",
+      isOpenPopap3: "none",
+      isOpenPopap4: "none",
+      isOpenPopap5: "none",
+      isOpenPopap6: "none",
       nameHome: "Home",
       nameAbount: "Abount",
       nameTechStack: "Tech Stack",
@@ -532,7 +846,7 @@ export default {
       msgH3: "Technologies I’ve been working with recently",
       nameTitleH2Project: "Projects",
       nameTitleH3Project: "Things I’ve built so far",
-      
+
       withProject: "375px",
       heigthProject: "260px",
 
@@ -628,6 +942,7 @@ export default {
       iconsGithub,
       iconsLinkChain,
       logoFooter,
+      vClose,
     };
   },
 };
@@ -782,5 +1097,29 @@ footer {
 }
 .stackImage div {
   margin: 50px 30px;
+}
+
+.popap {
+  max-width: 1000px;
+  width: 100%;
+  background: grey;
+  margin: 0px auto;
+  position: fixed;
+  top: 10px;
+  left: auto;
+  right: auto;
+}
+.project-popap {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.project_image_popap .img img {
+  border-radius: 50px;
+}
+.popap_button {
+  text-align: end;
+  margin: 10px;
 }
 </style>
